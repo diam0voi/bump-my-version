@@ -7,95 +7,128 @@ title: Bump My Version
 
 ## Bump My Version's purpose is to
 
-::: grid wide-gap
-    ::: card-container horizontal depth-0
-        ::: card-icon
-            :fontawesome-solid-gear:
-        ::: card-content
-            ::: card-content-title
-                Work as a part of an automated build system.
-            Bump My Version works with automation workflows.
 
-    ::: card-container horizontal depth-0
-        ::: card-icon
-            :fontawesome-solid-magnifying-glass:
-        ::: card-content
-            ::: card-content-title
-                Search and replace data in project files
-            Update the version and metadata in your files when you increment your version.
-
-    ::: card-container horizontal depth-0
-        ::: card-icon
-            :fontawesome-solid-sliders:
-        ::: card-content
-            ::: card-content-title
-                Manage your project's versioning
-            - Increment and serialize version numbers
-            - Parsing version numbers
-            - Support SemVer, CalVer, and other versioning schemes
-
-    ::: card-container horizontal depth-0
-        ::: card-icon
-            :fontawesome-solid-code-commit:
-        ::: card-content
-            ::: card-content-title
-                Work with the project's source control system
-            - Committing changes
-            - Tagging releases
-            - Reading version numbers from tags
+/// html | div.grid.wide-gap
+/// html | div.card-container.horizontal.depth-0
+/// html | div.card-icon
+:fontawesome-solid-gear:
+///
+/// html | div.card-content
+/// html | div.card-content-title
+Work as a part of an automated build system.
+///
+Bump My Version works with automation workflows.
+///
+///
+/// html | div.card-container.horizontal.depth-0
+/// html | div.card-icon
+:fontawesome-solid-magnifying-glass:
+///
+/// html | div.card-content
+/// html | div.card-content-title
+Search and replace data in project files
+///
+Update the version and metadata in your files when you increment your version.
+///
+///
+/// html | div.card-container.horizontal.depth-0
+/// html | div.card-icon
+:fontawesome-solid-sliders:
+///
+/// html | div.card-content
+/// html | div.card-content-title
+Manage your project's versioning
+///
+- Increment and serialize version numbers
+- Parsing version numbers
+- Support SemVer, CalVer, and other versioning schemes
+///
+///
+/// html | div.card-container.horizontal.depth-0
+/// html | div.card-icon
+:fontawesome-solid-code-commit:
+///
+/// html | div.card-content
+/// html | div.card-content-title
+Work with the project's source control system
+///
+- Committing changes
+- Tagging releases
+- Reading version numbers from tags
+///
+///
+///
 
 ## Jump to section
 
-::: grid wide-gap
+/// html | div.grid.wide-gap
 
-    ::: card-container
+/// html | div.card-container
 
-        ::: card-media
+/// html | div.card-media
 
-            ![Tutorials](assets/tutorial.jpg)
+![Tutorials](assets/tutorial.jpg)
 
-        ::: card-content
+///
+/// html | div.card-content
 
-            [Tutorials](tutorials/getting-started.md)
-            { .card-content-title }
+[Tutorials](tutorials/getting-started.md)
+{ .card-content-title }
 
-            Follow along with our guides to learn how to use Bump My Version.
+Follow along with our guides to learn how to use Bump My Version.
+///
+///
 
-    ::: card-container
+/// html | div.card-container
 
-        ::: card-media
+/// html | div.card-media
 
-            ![Reference](assets/reference.jpg)
+![Reference](assets/reference.jpg)
 
-        ::: card-content
+///
 
-            [Reference](reference/)
-            { .card-content-title }
+/// html | div.card-content
 
-            Consult the reference for specifics about the Bump My Version's configuration and commands.
+[Reference](reference/)
+{ .card-content-title }
 
-    ::: card-container
+Consult the reference for specifics about the Bump My Version's configuration and commands.
+///
+///
 
-        ::: card-media
+/// html | div.card-container
 
-            ![How-To's](assets/how-to.jpg)
+/// html | div.card-media
 
-        ::: card-content
+![How-To's](assets/how-to.jpg)
 
-            [How-To's](howtos/index.md)
-            { .card-content-title }
+///
 
-            Need to get something done? Check out our how-to guides.
+/// html | div.card-content
 
-    ::: card-container
+[How-To's](howtos/index.md)
+{ .card-content-title }
 
-        ::: card-media
+Need to get something done? Check out our how-to guides.
+///
+///
 
-            ![Explanations](assets/explanations.jpg)
+/// html | div.card-container
 
-        ::: card-content
+/// html | div.card-media
 
-            [Explanations](explanation/index.md)
-            { .card-content-title }
+![Explanations](assets/explanations.jpg)
 
-            Want to understand the library better? Read our explanations behind the design.
+///
+
+/// html | div.card-content
+
+[Explanations](explanation/index.md)
+{ .card-content-title }
+
+Want to understand the library better? Read our explanations behind the design.
+
+///
+
+///
+///
