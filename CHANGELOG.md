@@ -12,11 +12,11 @@
 
 - Add `allow_shell_hooks` option for safe hook execution; improve shell syntax handling. [036ee1a](https://github.com/callowayproject/bump-my-version/commit/036ee1a909aeea02eb8e4b144f856fb6d70444e9)
 
-  - Introduce `allow_shell_hooks` configuration to control shell metacharacters in hooks.
-  - Change default behavior to disallow shell syntax (`shell=False`) unless explicitly enabled.
-  - Add regex detection for shell syntax and migrate affected hooks.
-  - Update tests and fixtures to cover new functionality.
-  - Enhance documentation with migration guidance and best practices.
+    - Introduce `allow_shell_hooks` configuration to control shell metacharacters in hooks.
+    - Change default behavior to disallow shell syntax (`shell=False`) unless explicitly enabled.
+    - Add regex detection for shell syntax and migrate affected hooks.
+    - Update tests and fixtures to cover new functionality.
+    - Enhance documentation with migration guidance and best practices.
 
 ### Other
 
@@ -30,10 +30,10 @@
 
 - Update pre-commit, improve `is_subpath` logic, and enhance documentation. [919c66b](https://github.com/callowayproject/bump-my-version/commit/919c66b6c58095908dfd9ccdabab1cb367260df5)
 
-  - Update `ruff-pre-commit` to v0.15.1 in pre-commit config.
-  - Refine `is_subpath` logic to handle edge cases and add path resolution.
-  - Add security test cases for path traversal in `test_is_subpath`.
-  - Extend `AGENTS.md` with pytest execution instructions.
+    - Update `ruff-pre-commit` to v0.15.1 in pre-commit config.
+    - Refine `is_subpath` logic to handle edge cases and add path resolution.
+    - Add security test cases for path traversal in `test_is_subpath`.
+    - Extend `AGENTS.md` with pytest execution instructions.
 
 ## 1.2.7 (2026-02-14)
 
@@ -76,13 +76,13 @@
     Bumps the github-actions group with 2 updates in the / directory: [actions/checkout](https://github.com/actions/checkout) and [actions/download-artifact](https://github.com/actions/download-artifact).
 
     Updates `actions/checkout` from 5 to 6
-  - [Release notes](https://github.com/actions/checkout/releases)
-  - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
-  - [Commits](https://github.com/actions/checkout/compare/v5...v6)
+    - [Release notes](https://github.com/actions/checkout/releases)
+    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/actions/checkout/compare/v5...v6)
 
     Updates `actions/download-artifact` from 6 to 7
-  - [Release notes](https://github.com/actions/download-artifact/releases)
-  - [Commits](https://github.com/actions/download-artifact/compare/v6...v7)
+    - [Release notes](https://github.com/actions/download-artifact/releases)
+    - [Commits](https://github.com/actions/download-artifact/compare/v6...v7)
 
 ---
 
@@ -110,10 +110,10 @@ dependency-group: github-actions
 
 - Fix README.md's workflow permissions and token usage. [bf4397e](https://github.com/callowayproject/bump-my-version/commit/bf4397e3886a0fec8fcad68de79c73dd6ca2892c)
 
-  - Added explicit permissions for `id-token`, `pull-requests`, and `contents` in the build job.
-  - Replaced `GH_TOKEN` with `GITHUB_TOKEN` for consistency.
-  - Clarified documentation on using personal access tokens (PAT).
-  - Removed unused `MANIFEST.in` file.
+    - Added explicit permissions for `id-token`, `pull-requests`, and `contents` in the build job.
+    - Replaced `GH_TOKEN` with `GITHUB_TOKEN` for consistency.
+    - Clarified documentation on using personal access tokens (PAT).
+    - Removed unused `MANIFEST.in` file.
 
 - Fix outdated link URL in docs leading to a 404. [440300a](https://github.com/callowayproject/bump-my-version/commit/440300aa4d368fcca4be85aaf7245dd355dee25e)
 
@@ -128,8 +128,8 @@ dependency-group: github-actions
     Bumps the github-actions group with 1 update: [actions/download-artifact](https://github.com/actions/download-artifact).
 
     Updates `actions/download-artifact` from 5 to 6
-  - [Release notes](https://github.com/actions/download-artifact/releases)
-  - [Commits](https://github.com/actions/download-artifact/compare/v5...v6)
+    - [Release notes](https://github.com/actions/download-artifact/releases)
+    - [Commits](https://github.com/actions/download-artifact/compare/v5...v6)
 
 ---
 
@@ -171,14 +171,14 @@ dependency-type: direct:production
 
 - Fixed release hint rules. [fbd3deb](https://github.com/callowayproject/bump-my-version/commit/fbd3deb88e46744df5a8164777d926cbb89d5059)
 
-  - trigger release when pypproject.toml is changed
+    - trigger release when pypproject.toml is changed
 
 - Fix mercurial install on Windows. [c230f4a](https://github.com/callowayproject/bump-my-version/commit/c230f4ab09e72617a059f2696bb6cc19ebfe3ca3)
 
 - Fix breaking Click dependency. [5a4073b](https://github.com/callowayproject/bump-my-version/commit/5a4073b49fd7f202e54c2456f3fc6d3d8d8a088d)
 
-  - Set Click required version to `<8.2.2`
-  - `uv.lock` regenerated with upgraded dependencies
+    - Set Click required version to `<8.2.2`
+    - `uv.lock` regenerated with upgraded dependencies
 
 ### Other
 
@@ -223,17 +223,17 @@ dependency-type: direct:production
     Bumps the github-actions group with 3 updates in the / directory: [actions/checkout](https://github.com/actions/checkout), [actions/setup-python](https://github.com/actions/setup-python) and [actions/download-artifact](https://github.com/actions/download-artifact).
 
     Updates `actions/checkout` from 4 to 5
-  - [Release notes](https://github.com/actions/checkout/releases)
-  - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
-  - [Commits](https://github.com/actions/checkout/compare/v4...v5)
+    - [Release notes](https://github.com/actions/checkout/releases)
+    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/actions/checkout/compare/v4...v5)
 
     Updates `actions/setup-python` from 5 to 6
-  - [Release notes](https://github.com/actions/setup-python/releases)
-  - [Commits](https://github.com/actions/setup-python/compare/v5...v6)
+    - [Release notes](https://github.com/actions/setup-python/releases)
+    - [Commits](https://github.com/actions/setup-python/compare/v5...v6)
 
     Updates `actions/download-artifact` from 4 to 5
-  - [Release notes](https://github.com/actions/download-artifact/releases)
-  - [Commits](https://github.com/actions/download-artifact/compare/v4...v5)
+    - [Release notes](https://github.com/actions/download-artifact/releases)
+    - [Commits](https://github.com/actions/download-artifact/compare/v4...v5)
 
 ---
 
@@ -542,7 +542,7 @@ dependency-group: github-actions
 
 - Refactor SCMInfo and Config imports. [49995c6](https://github.com/callowayproject/bump-my-version/commit/49995c6a9b2ad59c65cb6c1e27362b1254ce7fb4)
 
-  - Fixes #300 incompatibility with Nuitka compiling
+    - Fixes #300 incompatibility with Nuitka compiling
 
 ### Other
 
@@ -591,8 +591,8 @@ dependency-group: github-actions
     Bumps the github-actions group with 1 update: [actions/setup-python](https://github.com/actions/setup-python).
 
     Updates `actions/setup-python` from 5.3.0 to 5.4.0
-  - [Release notes](https://github.com/actions/setup-python/releases)
-  - [Commits](https://github.com/actions/setup-python/compare/v5.3.0...v5.4.0)
+    - [Release notes](https://github.com/actions/setup-python/releases)
+    - [Commits](https://github.com/actions/setup-python/compare/v5.3.0...v5.4.0)
 
 ---
 
@@ -722,9 +722,9 @@ dependency-group: github-actions
     Bumps the github-actions group with 1 update: [softprops/action-gh-release](https://github.com/softprops/action-gh-release).
 
     Updates `softprops/action-gh-release` from 1 to 2
-  - [Release notes](https://github.com/softprops/action-gh-release/releases)
-  - [Changelog](https://github.com/softprops/action-gh-release/blob/master/CHANGELOG.md)
-  - [Commits](https://github.com/softprops/action-gh-release/compare/v1...v2)
+    - [Release notes](https://github.com/softprops/action-gh-release/releases)
+    - [Changelog](https://github.com/softprops/action-gh-release/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/softprops/action-gh-release/compare/v1...v2)
 
 ---
 
@@ -802,8 +802,8 @@ dependency-group: github-actions
     Bumps the github-actions group with 1 update: [actions/setup-python](https://github.com/actions/setup-python).
 
     Updates `actions/setup-python` from 5.1.1 to 5.3.0
-  - [Release notes](https://github.com/actions/setup-python/releases)
-  - [Commits](https://github.com/actions/setup-python/compare/v5.1.1...v5.3.0)
+    - [Release notes](https://github.com/actions/setup-python/releases)
+    - [Commits](https://github.com/actions/setup-python/compare/v5.1.1...v5.3.0)
 
 ---
 
@@ -840,7 +840,7 @@ dependency-group: github-actions
 
 - Refactored dependencies config. [39fed07](https://github.com/callowayproject/bump-my-version/commit/39fed070669258650cdf5d2a4c180399bf256ad6)
 
-  - Changed `project.optional-dependencies` to `dependency-groups`
+    - Changed `project.optional-dependencies` to `dependency-groups`
 
 ### New
 
@@ -865,9 +865,9 @@ dependency-group: github-actions
     Bumps the github-actions group with 1 update: [codecov/codecov-action](https://github.com/codecov/codecov-action).
 
     Updates `codecov/codecov-action` from 4 to 5
-  - [Release notes](https://github.com/codecov/codecov-action/releases)
-  - [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
-  - [Commits](https://github.com/codecov/codecov-action/compare/v4...v5)
+    - [Release notes](https://github.com/codecov/codecov-action/releases)
+    - [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/codecov/codecov-action/compare/v4...v5)
 
 ---
 
@@ -1024,11 +1024,11 @@ dependency-group: github-actions
 
 - Enhance hook handling and testing across hook types. [49f1953](https://github.com/callowayproject/bump-my-version/commit/49f1953c476a09cc9e7332af6347914935ee982c)
 
-  - Introduced unified handling for setup, pre-commit, and post-commit hooks, including dry-run support.
+    - Introduced unified handling for setup, pre-commit, and post-commit hooks, including dry-run support.
 
-  - Added comprehensive tests to ensure the correct behavior for all hook phases, including cases where no hooks are specified or in dry run mode.
+    - Added comprehensive tests to ensure the correct behavior for all hook phases, including cases where no hooks are specified or in dry run mode.
 
-  - Updated environment setup to use a common version environment function.
+    - Updated environment setup to use a common version environment function.
 
 - [pre-commit.ci] pre-commit autoupdate. [4342198](https://github.com/callowayproject/bump-my-version/commit/434219853b2824cbfff926e3cc79aa1b0ba10b3d)
 
@@ -1054,7 +1054,7 @@ dependency-group: github-actions
 
 - Fixed inconsistent terms in docstrings. [dfdf23e](https://github.com/callowayproject/bump-my-version/commit/dfdf23e04fe6a75341a8943f674c79897f5e0712)
 
-  - Switched from using both version parts and version components to simply version components.
+    - Switched from using both version parts and version components to simply version components.
 
 ### Updates
 
@@ -1336,8 +1336,8 @@ dependency-group: github-actions
 
 - Fixed the indentation problem. [ec3cd99](https://github.com/callowayproject/bump-my-version/commit/ec3cd998dfa7eaff678262163629abac73640c86)
 
-  - Added a dedent when a file does not match the change pattern.
-  - Fixes #181
+    - Added a dedent when a file does not match the change pattern.
+    - Fixes #181
 
 ### Other
 
@@ -1353,7 +1353,7 @@ dependency-group: github-actions
 
 - Fixed the rendering of numeric version components. [c522c75](https://github.com/callowayproject/bump-my-version/commit/c522c75e9b51cbcf09e7a1a41a0b6d210a3b44be)
 
-  - Numeric version components now will attempt to render its value as an integer and fall back to the parsed value.
+    - Numeric version components now will attempt to render its value as an integer and fall back to the parsed value.
 
 - Fixed code block in the README. [b4ff9f3](https://github.com/callowayproject/bump-my-version/commit/b4ff9f31557cf39ab3fdf4199c4fbddd03a78bbd)
 
@@ -1384,7 +1384,7 @@ dependency-group: github-actions
 - Pre-commit: Discover typos with codespell. [2509fc7](https://github.com/callowayproject/bump-my-version/commit/2509fc7690406f95dfc34a6d5e3eeb41205f8569)
 
     Related to:
-  - #168
+    - #168
 
 - [pre-commit.ci] pre-commit autoupdate. [be5cb79](https://github.com/callowayproject/bump-my-version/commit/be5cb79b3bb962c4118a77e9c5688e9eaa8b1b4f)
 
@@ -1405,7 +1405,7 @@ dependency-group: github-actions
     This is a requirement for CalVer to ensure they always increment with each bump, but it will work for any type.
 - Added CalVer function and formatting. [7a0e639](https://github.com/callowayproject/bump-my-version/commit/7a0e639da8d372e1960dc3dd1cd0620424a228d1)
 
-  - Version parts now have a `calver_format` attribute for CalVer parts.
+    - Version parts now have a `calver_format` attribute for CalVer parts.
 
 ### Updates
 
@@ -1421,7 +1421,7 @@ dependency-group: github-actions
 
 - Fixed platform-dependent encoding. [f8b4d65](https://github.com/callowayproject/bump-my-version/commit/f8b4d65fbc10e9e758114546de3d9c490bbdcb82)
 
-  - Added `encoding="utf-8"` to all writes.
+    - Added `encoding="utf-8"` to all writes.
 
 - Fixed version.yaml workflow. [10b007c](https://github.com/callowayproject/bump-my-version/commit/10b007c9434a2fed293a6867310f962f3f22a79b)
 
@@ -1436,18 +1436,18 @@ dependency-group: github-actions
     Bumps the github-actions group with 3 updates: [actions/checkout](https://github.com/actions/checkout), [actions/setup-python](https://github.com/actions/setup-python) and [codecov/codecov-action](https://github.com/codecov/codecov-action).
 
     Updates `actions/checkout` from 3 to 4
-  - [Release notes](https://github.com/actions/checkout/releases)
-  - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
-  - [Commits](https://github.com/actions/checkout/compare/v3...v4)
+    - [Release notes](https://github.com/actions/checkout/releases)
+    - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/actions/checkout/compare/v3...v4)
 
     Updates `actions/setup-python` from 4 to 5
-  - [Release notes](https://github.com/actions/setup-python/releases)
-  - [Commits](https://github.com/actions/setup-python/compare/v4...v5)
+    - [Release notes](https://github.com/actions/setup-python/releases)
+    - [Commits](https://github.com/actions/setup-python/compare/v4...v5)
 
     Updates `codecov/codecov-action` from 3 to 4
-  - [Release notes](https://github.com/codecov/codecov-action/releases)
-  - [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
-  - [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)
+    - [Release notes](https://github.com/codecov/codecov-action/releases)
+    - [Changelog](https://github.com/codecov/codecov-action/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/codecov/codecov-action/compare/v3...v4)
 
 ---
 
@@ -1460,8 +1460,8 @@ dependency-group: github-actions
 
 - Keep GitHub Actions up to date with GitHub's Dependabot. [2e55fa1](https://github.com/callowayproject/bump-my-version/commit/2e55fa1956012fa8e36c3f91afc6e3825d809779)
 
-  - <https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot>
-  - <https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem>
+    - <https://docs.github.com/en/code-security/dependabot/working-with-dependabot/keeping-your-actions-up-to-date-with-dependabot>
+    - <https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#package-ecosystem>
 
 ## 0.19.2 (2024-03-16)
 
@@ -1536,13 +1536,13 @@ dependency-group: github-actions
 
 - Fixed naming issue for docs. [2850aa7](https://github.com/callowayproject/bump-my-version/commit/2850aa7f5a804c554d304e45c56a757f55cc5940)
 
-  - renamed changelog.md and contributing.md
+    - renamed changelog.md and contributing.md
 
 ### New
 
 - Added how-to doc. [68643a9](https://github.com/callowayproject/bump-my-version/commit/68643a9a4945eee20f5b7c4d8fb2f0bc4dd8e7b7)
 
-  - "How to update a date in a file"
+    - "How to update a date in a file"
 
 ### Other
 
@@ -1622,19 +1622,19 @@ dependency-group: github-actions
 
 - Refactored serialization. [0ac2cd8](https://github.com/callowayproject/bump-my-version/commit/0ac2cd80925c352b72840c1d5707bb61a18248eb)
 
-  - Moved serialization from VersionConfig to version.serialization
+    - Moved serialization from VersionConfig to version.serialization
 
 - Fixed extra capture group in PEP440 parser. [384fd99](https://github.com/callowayproject/bump-my-version/commit/384fd994f67df1fe1a1d56c94e568a00d2c7176b)
 
 - Refactored verioning models. [88e7f71](https://github.com/callowayproject/bump-my-version/commit/88e7f71e200ba0a7ef6f121205d634820a68c150)
 
-  - created a "conventions" module for future release
-  - added an optional `depends_on` version component configuration
-  - The `depends_on` is required for PEP440 versioning
+    - created a "conventions" module for future release
+    - added an optional `depends_on` version component configuration
+    - The `depends_on` is required for PEP440 versioning
 
 - Fixed None as value for a function. [f8c4d05](https://github.com/callowayproject/bump-my-version/commit/f8c4d05d1b4d8df25335b84823a00888a43349f0)
 
-  - Turns None into an empty string
+    - Turns None into an empty string
 
 - Fixed bad imports. [5c86d51](https://github.com/callowayproject/bump-my-version/commit/5c86d512916b665f164de08b6c488aa6c3d2ee1e)
 
@@ -1672,17 +1672,17 @@ dependency-group: github-actions
 
 - Refactored the create subcommand. [f529d28](https://github.com/callowayproject/bump-my-version/commit/f529d283fb3a32eddee9daf368f9ce17ba5efcf1)
 
-  - Also organized the CLI tests
+    - Also organized the CLI tests
 
 ### New
 
 - Added `show-bump` subcommand. [0bbd814](https://github.com/callowayproject/bump-my-version/commit/0bbd81489ea0484962e9b3c207e6c6860cab6c55)
 
-  - Shows possible resulting versions of the `bump` command
+    - Shows possible resulting versions of the `bump` command
 
 - Added sample-config feature. [3d0f67d](https://github.com/callowayproject/bump-my-version/commit/3d0f67dbf9f42ffad1583e1fe08bd0971262257c)
 
-  - Initial implementation
+    - Initial implementation
 
 ### Updates
 
@@ -1698,9 +1698,9 @@ dependency-group: github-actions
 
 - Fixed extra whitespace added when updating pyproject.toml. [839f17f](https://github.com/callowayproject/bump-my-version/commit/839f17fbf7a0902fb15347a31778c55e9a91e7ab)
 
-  - Removed dotted-notation from requirements. There is an issue on how dotted-notation sets values in the TOMLkit data structure.
+    - Removed dotted-notation from requirements. There is an issue on how dotted-notation sets values in the TOMLkit data structure.
 
-  - Added `get_nested_value` and `set_nested_value` as replacements for dotted-notation.
+    - Added `get_nested_value` and `set_nested_value` as replacements for dotted-notation.
 
 ### Other
 
@@ -1744,7 +1744,7 @@ dependency-group: github-actions
 
 - Fixed testing automation. [19215f1](https://github.com/callowayproject/bump-my-version/commit/19215f1fc4eb6c51c26cf28c5aa7a36d7cd901a2)
 
-  - The new commit/tag decoupling requires the `--no-tag` flag
+    - The new commit/tag decoupling requires the `--no-tag` flag
 
 ## 0.15.3 (2023-12-18)
 
@@ -1754,7 +1754,7 @@ dependency-group: github-actions
 
 - Fix miscast of current_version. [b8ea252](https://github.com/callowayproject/bump-my-version/commit/b8ea2525aad07f370e59066bfb21db33e6656639)
 
-  - When using the legacy configuration format, a single-digit version is parsed as an int
+    - When using the legacy configuration format, a single-digit version is parsed as an int
 
     Fixes #99
 
@@ -1888,7 +1888,7 @@ dependency-group: github-actions
 
 - Added key_path to FileConfig. [e160b40](https://github.com/callowayproject/bump-my-version/commit/e160b401b0d14cef77255bbd87748721db4e2e3d)
 
-  - Also made all attributes required except `filename`, `glob`, and `key_path`
+    - Also made all attributes required except `filename`, `glob`, and `key_path`
 
 ### Other
 
@@ -1926,7 +1926,7 @@ dependency-group: github-actions
 
 - Fix dev versioning. [1eed99b](https://github.com/callowayproject/bump-my-version/commit/1eed99bb93b2144cd033f47c13e324a78e8beb0f)
 
-  - added an echo of the PR_NUMBER
+    - added an echo of the PR_NUMBER
 
 - Fix versioning of development versions. [e89599f](https://github.com/callowayproject/bump-my-version/commit/e89599f19843537c2e10d4c97da367d377e95914)
 
@@ -1970,8 +1970,8 @@ dependency-group: github-actions
 
     Fixes #59
 
-  - Changed the flags to --regex/--no-regex
-  - updated tests and docs
+    - Changed the flags to --regex/--no-regex
+    - updated tests and docs
 
 ## 0.11.0 (2023-09-26)
 
@@ -1997,12 +1997,12 @@ dependency-group: github-actions
 
 - Refactored file resolution, inclusion, and exclusion. [646af54](https://github.com/callowayproject/bump-my-version/commit/646af5438740e5dd17425144c6f2e4f305ffc30b)
 
-  - Fixes #61
-  - Config now includes `resolved_filemap` property
-  - resolved filemap expands all globs
-  - Config now includes `files_to_modify` property
-  - files to modify resolves inclusions and exclutions
-  - Improved Config.add_files property
+    - Fixes #61
+    - Config now includes `resolved_filemap` property
+    - resolved filemap expands all globs
+    - Config now includes `files_to_modify` property
+    - files to modify resolves inclusions and exclutions
+    - Improved Config.add_files property
 
 ## 0.9.3 (2023-08-25)
 
@@ -2020,7 +2020,7 @@ dependency-group: github-actions
 
 - Fixed documentation regarding regex config. [cd71a1a](https://github.com/callowayproject/bump-my-version/commit/cd71a1a4216286e49e0d1b8b9d867a26ee88eff8)
 
-  - TOML requires the double backslash while INI doesn't
+    - TOML requires the double backslash while INI doesn't
 
 - Fixed requirements for docs. [7856ee0](https://github.com/callowayproject/bump-my-version/commit/7856ee01559289e943a26af7e36382855973e485)
 
@@ -2054,8 +2054,8 @@ dependency-group: github-actions
 
 - Fixed modified context when committing. [130bbe0](https://github.com/callowayproject/bump-my-version/commit/130bbe0dc9cbc436ed2d4a74878937fc784fbccd)
 
-  - Resets the context before committing and tagging
-  - Fixes #14
+    - Resets the context before committing and tagging
+    - Fixes #14
 
 ## 0.9.1 (2023-08-03)
 
@@ -2087,12 +2087,12 @@ dependency-group: github-actions
 
 - Added configuration and command-line `no_regex` option. [a295a32](https://github.com/callowayproject/bump-my-version/commit/a295a328caedabfe8a1c270a34a6f3ddc41dff7b)
 
-  - Global and individual file configurations available for `no_regex`
-  - Command-line flag `--no-regex` flag added for `bump` and `replace` sub-commands
+    - Global and individual file configurations available for `no_regex`
+    - Command-line flag `--no-regex` flag added for `bump` and `replace` sub-commands
 
 - Adds regular expression searching ability. [0210d74](https://github.com/callowayproject/bump-my-version/commit/0210d74a2a66deb58b59b601d61a1b0409c2b6eb)
 
-  - Search strings are treated as regular expressions after the initial substitution
+    - Search strings are treated as regular expressions after the initial substitution
 
 - Added deprecation warning on .cfg files. [a0481b7](https://github.com/callowayproject/bump-my-version/commit/a0481b7fb9d9b210fc8162abcb5d5a8ba2710134)
 
@@ -2108,13 +2108,13 @@ dependency-group: github-actions
 
 - Added `ignore-missing-version` configuration. [45c85be](https://github.com/callowayproject/bump-my-version/commit/45c85be6cd1eea10baa37e4529c3fd9ca7afc78d)
 
-  - Defaults to `False`
-  - File configurations can also override this value
+    - Defaults to `False`
+    - File configurations can also override this value
 
 - Added deprecation warnings. [733438b](https://github.com/callowayproject/bump-my-version/commit/733438beb8ad8e320968ef0b2ba2031dc05bd0a5)
 
-  - `--list` option will go bye-bye in 1.0
-  - calling `bumpversion` without a subcomand will leave in 1.0
+    - `--list` option will go bye-bye in 1.0
+    - calling `bumpversion` without a subcomand will leave in 1.0
 
 ## 0.7.1 (2023-07-12)
 
@@ -2124,7 +2124,7 @@ dependency-group: github-actions
 
 - Fix search and replace options for replace. [781e8d8](https://github.com/callowayproject/bump-my-version/commit/781e8d8094ba9f16d915a551b3bc51bd6aa54cfa)
 
-  - The `--search` and `--replace` options now completely override any other search and replace logic.
+    - The `--search` and `--replace` options now completely override any other search and replace logic.
 
     Fixes #34
 
@@ -2150,8 +2150,8 @@ dependency-group: github-actions
 
 - Fixed typing issue. [bfe5306](https://github.com/callowayproject/bump-my-version/commit/bfe530668d8f176843eedcd7096fcd2b85eef228)
 
-  - Declared SourceCodeManager attributes as `ClassVar[List[str]]`
-  - `_TEST_USABLE_COMMAND`, `_COMMIT_COMMAND`, and `_ALL_TAGS_COMMAND` affected
+    - Declared SourceCodeManager attributes as `ClassVar[List[str]]`
+    - `_TEST_USABLE_COMMAND`, `_COMMIT_COMMAND`, and `_ALL_TAGS_COMMAND` affected
 
 ### New
 
@@ -2161,16 +2161,16 @@ dependency-group: github-actions
 
 - Added replace subcommand. [8722a0f](https://github.com/callowayproject/bump-my-version/commit/8722a0f84ab60cbfc254741b2a5bc0d968e423d9)
 
-  - Works just like `bump` but
-    - doesn't do any version incrementing
-    - Will not change the configuration file
-    - Will not commit or tag
+    - Works just like `bump` but
+        - doesn't do any version incrementing
+        - Will not change the configuration file
+        - Will not commit or tag
 
-  - Can use `bumpversion show new_version --increment <versionpart>` to see what the new version would be
+    - Can use `bumpversion show new_version --increment <versionpart>` to see what the new version would be
 
 - Adds `short_branch_name` to version rendering context. [7f7e50c](https://github.com/callowayproject/bump-my-version/commit/7f7e50c98dc20210468a9cef34baf4374956c2e9)
 
-  - `short_branch_name` is the branch name, lower case, containing only a-z and 0-9, and truncated to 20 characters.
+    - `short_branch_name` is the branch name, lower case, containing only a-z and 0-9, and truncated to 20 characters.
 
     Fixes #28
 
@@ -2196,13 +2196,13 @@ dependency-group: github-actions
 
 - Fixed `--help` and `bump` invocations. [9d965e5](https://github.com/callowayproject/bump-my-version/commit/9d965e57f2c0a41476d75ec053653416eae966c9)
 
-  - `--help` works for individual sub-commands, but not for the command
-  - `bump` now works and fixed tests
+    - `--help` works for individual sub-commands, but not for the command
+    - `bump` now works and fixed tests
 
 - Fixed issue regarding TOML types. [8960d24](https://github.com/callowayproject/bump-my-version/commit/8960d249183cf78d8b35967b86fef8701fc9c37e)
 
-  - `tomlkit.parse()` returns a `TOMLDocument`.
-  - `unwrap()` converts it into a `dict`
+    - `tomlkit.parse()` returns a `TOMLDocument`.
+    - `unwrap()` converts it into a `dict`
 
 ### New
 
@@ -2212,23 +2212,23 @@ dependency-group: github-actions
 
 - Adds `--increment` option to `show` subcommand. [b01fffc](https://github.com/callowayproject/bump-my-version/commit/b01fffcad8479db25375d53fdeebc879d7317b11)
 
-  - when specified it increments the current version and adds `new_version` to the available output.
+    - when specified it increments the current version and adds `new_version` to the available output.
 
 - Added `show` subcommand. [9bce887](https://github.com/callowayproject/bump-my-version/commit/9bce887cf5e72907ae00b45a7b7f4812dcc2f17e)
 
-  - supersedes the `--list` option
-  - provides much more capability
-  - Can output in YAML, JSON, and default
-  - Can specify one or more items to display
-  - Can use dotted-notation to pull items from nested data structures.
+    - supersedes the `--list` option
+    - provides much more capability
+    - Can output in YAML, JSON, and default
+    - Can specify one or more items to display
+    - Can use dotted-notation to pull items from nested data structures.
 
 ### Updates
 
 - Changes bump-my-version into subcommands. [31ffbcf](https://github.com/callowayproject/bump-my-version/commit/31ffbcf839e2491c31d90b51041d1e840371108f)
 
-  - Is backwards-compatible with previous versions
-  - `bump-my-version` forwards command to `bump-my-version bump` subcommand
-  - Only problem is that Click will not show help automatically, must provide `--help`
+    - Is backwards-compatible with previous versions
+    - `bump-my-version` forwards command to `bump-my-version bump` subcommand
+    - Only problem is that Click will not show help automatically, must provide `--help`
 
 ## 0.5.1 (2023-06-14)
 
@@ -2238,8 +2238,8 @@ dependency-group: github-actions
 
 - Fixes reporting the wrong version missing in a file. [efb04e9](https://github.com/callowayproject/bump-my-version/commit/efb04e94a07fa886253bbfc9cf801040e4c03895)
 
-  - Fixes issue #20
-  - Renders the correct `current_version` for each file being modified.
+    - Fixes issue #20
+    - Renders the correct `current_version` for each file being modified.
 
 ### Other
 
@@ -2275,8 +2275,8 @@ dependency-group: github-actions
 
 - Made `VERSION_PART` optional. [f236b7d](https://github.com/callowayproject/bump-my-version/commit/f236b7de94d9f58e493c617848e3eb02e85a24c7)
 
-  - Fixes #16
-  - `VERSION_PART` is detected from the arguments based on the configuration
+    - Fixes #16
+    - `VERSION_PART` is detected from the arguments based on the configuration
 
 ### Updates
 
@@ -2286,7 +2286,7 @@ dependency-group: github-actions
 
 - Changed exception type raised when bad version part is detected. [1e3ebc5](https://github.com/callowayproject/bump-my-version/commit/1e3ebc5b144294771b7bfe812299af4f92ae212a)
 
-  - ValueError -> click.BadArgumentUsage
+    - ValueError -> click.BadArgumentUsage
 
 - Updated readme. [7780265](https://github.com/callowayproject/bump-my-version/commit/7780265b97ce49492fef73ca3ac8a1cce27a2fad)
 
@@ -2330,15 +2330,15 @@ dependency-group: github-actions
 
 - Fixed vague commit and tagging info. [4fb5158](https://github.com/callowayproject/bump-my-version/commit/4fb515851f3ddf78916c624db86c0b3e1869293b)
 
-  - If commit is configured false, it will report that it will not commit
+    - If commit is configured false, it will report that it will not commit
 
-  - If commit is configured false, tagging is disabled and it reports that
+    - If commit is configured false, tagging is disabled and it reports that
 
-  - If tagging is configured false, it will report it is not tagging
+    - If tagging is configured false, it will report it is not tagging
 
 - Fixes test package. [7c12072](https://github.com/callowayproject/bump-my-version/commit/7c12072b11938385ec81c5e9cd285d91ac1c00d7)
 
-  - The build-and-inspect action didn't save the dist packages
+    - The build-and-inspect action didn't save the dist packages
 
 ### New
 
@@ -2364,7 +2364,7 @@ dependency-group: github-actions
 
 - Changed the version serialization. [c529452](https://github.com/callowayproject/bump-my-version/commit/c529452b043e8ab1b5711065c1ef96d73030978b)
 
-  - can bump "dev" to get a development release
+    - can bump "dev" to get a development release
 
 - Updated formatting documentation. [8006f3e](https://github.com/callowayproject/bump-my-version/commit/8006f3efc749a2b8ad21fd365da4d29ebf81cc3b)
 
@@ -2382,16 +2382,16 @@ dependency-group: github-actions
 
 - Fixes issue when new version equals current version. [64b0de3](https://github.com/callowayproject/bump-my-version/commit/64b0de39828367c6c6f3e7103497256ce3f44f41)
 
-  - Now it reports they are the same and exits.
+    - Now it reports they are the same and exits.
 
 - Fixes issue of duplicate tags. [c025650](https://github.com/callowayproject/bump-my-version/commit/c0256509cb39c3e78c09d35205007191fbf3732e)
 
-  - Now it checks if the tag exists and reports a warning
+    - Now it checks if the tag exists and reports a warning
 
 - Fixed automation tooling. [19f13b7](https://github.com/callowayproject/bump-my-version/commit/19f13b7c0c388f15af45cf3fa04424a2946b4a04)
 
-  - changed name to bump-my-version in setup.cfg
-  - added PAT in release pipeline to (hopefully) allow committing and tagging to master without issue.
+    - changed name to bump-my-version in setup.cfg
+    - added PAT in release pipeline to (hopefully) allow committing and tagging to master without issue.
 
 ### New
 
@@ -2421,11 +2421,11 @@ dependency-group: github-actions
 
 - Fixed issue with windows testing. [b8abc44](https://github.com/callowayproject/bump-my-version/commit/b8abc44e77d62e85f7315e4866b772f0cf6c5eff)
 
-  - different methods for reporting paths was resolved by casting them the pathlib.Paths
+    - different methods for reporting paths was resolved by casting them the pathlib.Paths
 
 - Fixes windows testing error. [556853b](https://github.com/callowayproject/bump-my-version/commit/556853bd017360651b3600cce00cdd6bf00d59f0)
 
-  - the differences in path specifications seems to be causing problems.
+    - the differences in path specifications seems to be causing problems.
 
 - Fixed type issue in Python 3.7, 3.8. [ddfd3bf](https://github.com/callowayproject/bump-my-version/commit/ddfd3bf1e72109ef45307e8c76576dfe9f3e575c)
 
@@ -2441,13 +2441,13 @@ dependency-group: github-actions
 
 - Added new workflows. [a9cac5b](https://github.com/callowayproject/bump-my-version/commit/a9cac5b7728fabd46551926b552aba12ed91bd0c)
 
-  - Added bumpversion.yaml to increase the version when a PR is closed
+    - Added bumpversion.yaml to increase the version when a PR is closed
 
-  - Added release.yaml to create a github release and upload things to PyPI
+    - Added release.yaml to create a github release and upload things to PyPI
 
 - Added PYTHONUTF8 mode. [91a73e2](https://github.com/callowayproject/bump-my-version/commit/91a73e26af94185194aea1ddb803ac621c0ae84a)
 
-  - see <https://docs.python.org/3/using/windows.html#utf-8-mode>
+    - see <https://docs.python.org/3/using/windows.html#utf-8-mode>
 
 - Added explicit environment variable declarations. [80fe7ef](https://github.com/callowayproject/bump-my-version/commit/80fe7ef0cf1005333143cce38835dbc9ad811884)
 
@@ -2455,8 +2455,8 @@ dependency-group: github-actions
 
 - Added files for coverage to ignore. [cfbba08](https://github.com/callowayproject/bump-my-version/commit/cfbba08f23c44dd8e44b545961cbca2599b96e69)
 
-  - **main**.py
-  - aliases.py
+    - **main**.py
+    - aliases.py
 
 - Added LICENSE. [34a9be5](https://github.com/callowayproject/bump-my-version/commit/34a9be5617a24b9d7eb042dc12e657ef1eb4258c)
 
@@ -2482,8 +2482,8 @@ dependency-group: github-actions
 
 - Updated workflows. [857835d](https://github.com/callowayproject/bump-my-version/commit/857835d7ce10fe52633fb3cc12f52a55a117cd31)
 
-  - Added better changelog parsing
-  - Added workflow dispatch inputs for manual runs
+    - Added better changelog parsing
+    - Added workflow dispatch inputs for manual runs
 
 - Improved documentation. [f3b7a0f](https://github.com/callowayproject/bump-my-version/commit/f3b7a0f4b1ec72e584677ff59ce4b0b6d59cd083)
 

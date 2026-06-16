@@ -108,11 +108,11 @@ def resolve_conf_location(url_or_path: str) -> Path:
     Args:
         url_or_path: The URL or path to resolve.
 
-    Raises:
-        BumpVersionError: if the file does not exist.
-
     Returns:
         The contents of the location.
+
+    Raises:
+        BumpVersionError: if the file does not exist.
     """
     parsed_url = urlparse(url_or_path)
 
