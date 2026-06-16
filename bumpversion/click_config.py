@@ -5,7 +5,7 @@ from tempfile import NamedTemporaryFile
 from typing import Any, Callable, Optional, Sequence, Type, Union
 from urllib.parse import urlparse
 
-import httpx
+import httpx2 as httpx
 from click import Context, Option
 from click.decorators import FC, _param_memo  # noqa: PLC2701
 

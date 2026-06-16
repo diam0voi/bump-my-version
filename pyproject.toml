@@ -41,7 +41,7 @@ dependencies = [
     "rich",
     "tomlkit",
     "wcmatch>=8.5.1",
-    "httpx>=0.28.1",
+    "httpx2",
     "click<8.4",
 ]
 
@@ -61,10 +61,8 @@ dev = [
     "pre-commit",
 ]
 docs = [
-    "black",
-    "markdown-customblocks",
     "mdx-truly-sane-lists",
-    "mkdocs",
+    "properdocs",
     "mkdocs-click",
     "mkdocs-drawio",
     "mkdocs-gen-files",
@@ -159,9 +157,6 @@ verbose = 0
 quiet = false
 whitelist-regex = []
 color = true
-
-[tool.black]
-line-length = 119
 
 [tool.rumdl]
 line-length = 120
@@ -382,3 +377,6 @@ check-return-types = false
 skip-checking-raises = true
 quiet = true
 check-class-attributes = false
+
+[tool.uv.sources]
+markdown-blocks = { path = "../markdown-blocks" }

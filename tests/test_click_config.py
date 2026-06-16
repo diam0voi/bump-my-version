@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Optional
 
 import click
-import httpx
+import httpx2 as httpx
 import pytest
 
 from bumpversion.click_config import config_option, download_url, resolve_conf_location
