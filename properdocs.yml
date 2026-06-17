@@ -65,6 +65,7 @@ markdown_extensions:
   - tables
 
 plugins:
+  - click-extra
   - search
   - git-revision-date-localized
   - git-authors:
