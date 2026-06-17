@@ -2,8 +2,8 @@ site_name: Bump My Version
 repo_url: https://github.com/callowayproject/bump-my-version
 edit_uri: edit/master/docs/
 copyright: Calloway Project
-watch:
-  - overrides
+#watch:
+#  - overrides
 theme:
   name: material
   custom_dir: overrides
@@ -36,12 +36,12 @@ markdown_extensions:
   - abbr
   - admonition
   - attr_list
-  - customblocks
   - def_list
   - footnotes
   - md_in_html
   - mdx_truly_sane_lists
   - mkdocs-click
+  - pymdownx.blocks.html
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -65,6 +65,7 @@ markdown_extensions:
   - tables
 
 plugins:
+  - click-extra
   - search
   - git-revision-date-localized
   - git-authors:
@@ -79,7 +80,7 @@ plugins:
       scripts:
         - docs/gen_doc_stubs.py
   - mkdocstrings:
-      custom_templates: overrides/mkdocstrings
+#      custom_templates: overrides/mkdocstrings
       handlers:
         python:
           inventories:

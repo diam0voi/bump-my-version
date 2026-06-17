@@ -23,14 +23,14 @@ Bump My Version's purpose is to:
 
 - Work as a part of an automated build system
 - Manage project versioning through the project's development life cycle
-  - Incrementing and serializing version numbers
-  - parsing version numbers
-  - supporting SemVer, CalVer, and other versioning schemes
+    - Incrementing and serializing version numbers
+    - parsing version numbers
+    - supporting SemVer, CalVer, and other versioning schemes
 - Search and replace data in project files
 - Work with the project's source control system
-  - Committing changes
-  - Tagging releases
-  - Reading version numbers from tags
+    - Committing changes
+    - Tagging releases
+    - Reading version numbers from tags
 
 ## Installation
 
@@ -239,9 +239,9 @@ The full development and release path now is:
 
 - `1.0.0`
 - `bump patch` → `1.0.1-dev0`
-  - each commit will increase → `1.0.1-dev1`
+    - each commit will increase → `1.0.1-dev1`
 - `bump pre_l` → `1.0.1-rc0`
-  - each commit will increase → `1.0.1-rc1`
+    - each commit will increase → `1.0.1-rc1`
 - `bump pre_l` → `1.0.1`
 
 1. You must decide on the next version before you start developing.

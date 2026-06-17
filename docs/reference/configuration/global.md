@@ -6,93 +6,103 @@ date: 2024-08-11
 comments: true
 ---
 
-# Global Configuration
+## Global Configuration
 
 The general configuration is grouped in a `[tool.bumpversion]` or `[bumpversion]` section, depending on if it is a TOML or INI file, respectfully.
 
-## allow_dirty
+### allow_dirty
 
-::: field-list
-    required
-    :   No
+/// html | div.field-list
 
-    default
-    :   `False` 
+required
+:   No
 
-    type
-    :   boolean
+default
+:   `False` 
 
-    command line option
-    :   `--allow-dirty | --no-allow-dirty`
+type
+:   boolean
 
-    environment var
-    :   `BUMPVERSION_ALLOW_DIRTY`
+command line option
+:   `--allow-dirty | --no-allow-dirty`
+
+environment var
+:   `BUMPVERSION_ALLOW_DIRTY`
+
+///
 
 Bump-my-version's default behavior is to abort if the working directory has uncommitted changes. This protects you from releasing unversioned files and overwriting unsaved changes.
 
-## commit
+### commit
 
-::: field-list
-    required
-    :   No
+/// html | div.field-list
 
-    default
-    :   `False` (Don't create a commit)
+required
+:   No
 
-    type
-    :   boolean
+default
+:   `False` (Don't create a commit)
 
-    command line option
-    :   `--commit | --no-commit`
+type
+:   boolean
 
-    environment var
-    :   `BUMPVERSION_COMMIT`
+command line option
+:   `--commit | --no-commit`
+
+environment var
+:   `BUMPVERSION_COMMIT`
+
+///
 
 Whether to create a commit using git or Mercurial.
 
 If you have pre-commit hooks, add an option to [`commit_args`](global.md#commit_args) to turn off your pre-commit hooks. For Git, use `--no-verify` and use `--config hooks.pre-commit=` for Mercurial.
 
-## commit_args
+### commit_args
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `""`
+default
+: `""`
 
-    type
-    : string
+type
+: string
 
-    command line option
-    : `--commit-args`
+command line option
+: `--commit-args`
 
-    environment var
-    : `BUMPVERSION_COMMIT_ARGS`
+environment var
+: `BUMPVERSION_COMMIT_ARGS`
+
+///
 
 Extra arguments to pass to commit command. This is only used when the [`commit`](global.md#commit) option is set to `True`.
 
 If you have pre-commit hooks, add an option to turn off your pre-commit hooks. For Git, use `--no-verify` and use `--config hooks.pre-commit=` for Mercurial.
 
-## current_version
+### current_version
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : **Yes‡**
+required
+: **Yes‡**
 
-    default
-    : `""`
+default
+: `""`
 
-    type
-    : string
+type
+: string
 
-    command line option
-    : `--current-version`
+command line option
+: `--current-version`
 
-    environment var
-    : `BUMPVERSION_CURRENT_VERSION`
+environment var
+: `BUMPVERSION_CURRENT_VERSION`
+
+///
 
 The current version of the software package before bumping. A value for this is required, unless a fallback value is found.
 
@@ -100,172 +110,193 @@ The current version of the software package before bumping. A value for this is 
 
     ‡ If `pyproject.toml` exists, then `current_version` falls back to `project.version` in `pyproject.toml`. This only works if `project.version` is statically set.
 
-## ignore_missing_files
+### ignore_missing_files
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `False`
+default
+: `False`
 
-    type
-    : boolean
+type
+: boolean
 
-    command line option
-    : `--ignore-missing-files`
+command line option
+: `--ignore-missing-files`
 
-    environment var
-    : `BUMPVERSION_IGNORE_MISSING_FILES`
+environment var
+: `BUMPVERSION_IGNORE_MISSING_FILES`
+
+///
 
 If `True`, don't fail if the configured file is missing.
 
-## ignore_missing_version
+### ignore_missing_version
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `False`
+required
+: No
 
-    type
-    : boolean
+default
+: `False`
 
-    command line option
-    : `--ignore-missing-version`
+type
+: boolean
 
-    environment var
-    : `BUMPVERSION_IGNORE_MISSING_VERSION`
+command line option
+: `--ignore-missing-version`
+
+environment var
+: `BUMPVERSION_IGNORE_MISSING_VERSION`
+
+///
 
 If `True`, don't fail if the version string to be replaced is not found in the file.
 
-## message
+### message
 
-::: field-list
+/// html | div.field-list
 
-    required
-    :   No
+required
+:   No
 
-    default
-    :   `Bump version: {current_version} → {new_version}`
+default
+:   `Bump version: {current_version} → {new_version}`
 
-    type
-    :   string
+type
+:   string
 
-    command line option
-    :   `--message`
+command line option
+:   `--message`
 
-    environment var
-    :   `BUMPVERSION_MESSAGE`
+environment var
+:   `BUMPVERSION_MESSAGE`
+
+///
 
 The commit message template to use when creating a commit. This is only used when the [`commit`](global.md#commit) option is set to `True`.
 
 This string is templated using the [Python Format String Syntax](https://docs.python.org/3/library/string.html#format-string-syntax). The [formatting context reference](../formatting-context.md) describes the available variables.
 
-## parse
+### parse
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)`
+required
+: No
 
-    type
-    : string
+default
+: `(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)`
 
-    command line option
-    : `--parse`
+type
+: string
 
-    environment var
-    : `BUMPVERSION_PARSE`
+command line option
+: `--parse`
+
+environment var
+: `BUMPVERSION_PARSE`
+
+///
 
 This is the default regular expression ([Python regular expression syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax)) for finding and parsing the version string into its components. Individual part or file configurations may override this.
 
 The regular expression must be able to parse all strings produced by the configured [`serialize`](global.md#serialize) value. Named matching groups ("`(?P<name>...)`") indicate the version part the matched value belongs to.
 
-## regex
+### regex
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `False`
+default
+: `False`
 
-    type
-    : boolean
+type
+: boolean
 
-    command line option
-    : `--regex | --no-regex`
+command line option
+: `--regex | --no-regex`
 
-    environment var
-    : `BUMPVERSION_REGEX`
+environment var
+: `BUMPVERSION_REGEX`
+
+///
 
 Treat the `search` string as a regular expression.
 
-## replace
+### replace
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `{new_version}`
+required
+: No
 
-    type
-    : string
+default
+: `{new_version}`
 
-    command line option
-    : `--replace`
+type
+: string
 
-    environment var
-    : `BUMPVERSION_REPLACE`
+command line option
+: `--replace`
+
+environment var
+: `BUMPVERSION_REPLACE`
+
+///
 
 This is the template to create the string that will replace the current version number in the file.
 
-## search
+### search
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `{current_version}`
+required
+: No
 
-    type
-    : string
+default
+: `{current_version}`
 
-    command line option
-    : `--search`
+type
+: string
 
-    environment var
-    : `BUMPVERSION_SEARCH`
+command line option
+: `--search`
+
+environment var
+: `BUMPVERSION_SEARCH`
+
+///
 
 This is the template string for searching. It is rendered using the [formatting context](../formatting-context.md) for searching in the file. Individual file configurations may override this. This can span multiple lines and is templated using [Python Format String Syntax](https://docs.python.org/3/library/string.html#format-string-syntax). The [formatting context reference](../formatting-context.md) describes the available variables.
 
 This is useful if there is the remotest possibility that the current version number might be present multiple times in the file and you mean to bump only one of the occurrences.
 
-## serialize
+### serialize
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `["{major}.{minor}.{patch}"]`
+required
+: No
 
-    type
-    : an array of strings
+default
+: `["{major}.{minor}.{patch}"]`
 
-    command line option
-    : `--serialize`
+type
+: an array of strings
 
-    environment var
-    : `BUMPVERSION_SERIALIZE`
+command line option
+: `--serialize`
+
+environment var
+: `BUMPVERSION_SERIALIZE`
+
+///
 
 This is the default list of templates specifying how to serialize the version parts back to a version string. Individual part or file configurations may override this.
 
@@ -283,67 +314,74 @@ Since `0` is optional by default, Version `1.8.9` will serialize to `1.8.9`, `1.
 
 Each string is templated using the [Python Format String Syntax](https://docs.python.org/3/library/string.html#format-string-syntax). The [formatting context reference](../formatting-context.md) describes the available variables.
 
-## sign_tags
+### sign_tags
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `False` (Don't sign tags)
+default
+: `False` (Don't sign tags)
 
-    type
-    : boolean
+type
+: boolean
 
-    command line option
-    : `--sign-tags | --no-sign-tags`
+command line option
+: `--sign-tags | --no-sign-tags`
 
-    environment var
-    : `BUMPVERSION_SIGN_TAGS`
+environment var
+: `BUMPVERSION_SIGN_TAGS`
+
+///
 
 If `True`, sign the created tag, when [`tag`](global.md#tag) is `True`.
 
-## tag
+### tag
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `False` (Don't create a tag)
+default
+: `False` (Don't create a tag)
 
-    type
-    : boolean
+type
+: boolean
 
-    command line option
-    : `--tag | --no-tag`
+command line option
+: `--tag | --no-tag`
 
-    environment var
-    : `BUMPVERSION_TAG`
+environment var
+: `BUMPVERSION_TAG`
+
+///
 
 If `True`, create a tag after committing the changes. The tag is named using the [`tag_name`](global.md#tag_name) option.
 
 If you are using `git`, don't forget to `git-push` with the `--tags` flag when you are done.
 
-## tag_message
+### tag_message
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : `Bump version: {current_version} → {new_version}`
+required
+: No
 
-    type
-    : string
+default
+: `Bump version: {current_version} → {new_version}`
 
-    command line option
-    : `--tag-message`
+type
+: string
 
-    environment var
-    : `BUMPVERSION_TAG_MESSAGE`
+command line option
+: `--tag-message`
+
+environment var
+: `BUMPVERSION_TAG_MESSAGE`
+
+///
 
 The tag message template to use when creating a tag when [`tag`](global.md#tag) is `True`
 
@@ -351,30 +389,32 @@ This string is templated using the [Python Format String Syntax](https://docs.py
 
 Bump My Version creates an _annotated_ tag in Git by default. To turn this off and create a _lightweight_ tag, you must explicitly set an empty `tag_message` value.
 
-## tag_name
+### tag_name
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : `v{new_version}`
+default
+: `v{new_version}`
 
-    type
-    : string
+type
+: string
 
-    command line option
-    : `--tag-name`
+command line option
+: `--tag-name`
 
-    environment var
-    : `BUMPVERSION_TAG_NAME`
+environment var
+: `BUMPVERSION_TAG_NAME`
+
+///
 
 The template used to render the tag when [`tag`](global.md#tag) is `True`.
 
 This string is templated using the [Python Format String Syntax](https://docs.python.org/3/library/string.html#format-string-syntax). The [formatting context reference](../formatting-context.md) describes the available variables.
 
-## Examples
+### Examples
 
 === "TOML"
 

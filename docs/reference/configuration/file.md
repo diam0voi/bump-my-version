@@ -6,21 +6,24 @@ date: 2024-08-11
 comments: true
 ---
 
-# File-specific configuration
+## File-specific configuration
 
 This section configures which files Bump My Version should update by replacing their current version with the newly bumped version.
 
-## filename
+### filename
 
-::: field-list
-    required
-    : **Yes‡**
+/// html | div.field-list
 
-    default
-    : empty
+required
+: **Yes‡**
 
-    type
-    : string
+default
+: empty
+
+type
+: string
+
+///
 
 The name of the file to modify.
 
@@ -28,17 +31,20 @@ The name of the file to modify.
 
     ‡ This is only used with TOML configuration and is only required if [`glob`](#glob) is _not_ specified. INI-style configuration files specify the file name as part of the grouping.
 
-## glob
+### glob
 
-::: field-list
-    required
-    : **Yes‡**
+/// html | div.field-list
 
-    default
-    : empty
+required
+: **Yes‡**
 
-    type
-    : string
+default
+: empty
+
+type
+: string
+
+///
 
 The glob pattern specifying the files to modify.
 
@@ -46,160 +52,181 @@ The glob pattern specifying the files to modify.
 
     ‡ This is only used with TOML configuration, and is only required if [`filename`](#filename) is _not_ specified. INI-style configuration files specify the glob pattern as part of the grouping.
 
-## glob_exclude
+### glob_exclude
 
-::: field-list
-    required
-    : No
+/// html | div.field-list
 
-    default
-    : empty
+required
+: No
 
-    type
-    : list of string
+default
+: empty
+
+type
+: list of string
+
+///
 
 A list of glob patterns to exclude from the files found via the `glob` parameter. Does nothing if `filename` is specified.
 
-## parse
+### parse
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : the value configured in the global `parse` field
+default
+: the value configured in the global `parse` field
 
-    type
-    : string
+type
+: string
+
+///
 
 This is an override to the default pattern to parse the version number from this file.
 
-## serialize
+### serialize
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : the value configured in the global `serialize` field
+default
+: the value configured in the global `serialize` field
 
-    type
-    : an array of strings
+type
+: an array of strings
+
+///
 
 This is an override to the default templates to serialize the new version number in this file.
 
-## search
+### search
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : the value configured in the global `search` field
+default
+: the value configured in the global `search` field
 
-    type
-    : string
+type
+: string
+
+///
 
 This is an override to the default template string how to search for the string to be replaced in the file.
 
-## regex
+### regex
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : the value configured in the global `regex` field
+default
+: the value configured in the global `regex` field
 
-    type
-    : boolean
+type
+: boolean
+
+///
 
 If `True`, treat the `search` parameter as a regular expression.
 
-## replace
+### replace
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : the value configured in the global `replace` field
+default
+: the value configured in the global `replace` field
 
-    type
-    : string
+type
+: string
+
+///
 
 This is an override to the template to create the string that will replace the current version number in the file.
 
-## ignore_missing_version
+### ignore_missing_version
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : The value configured in the global `ignore_missing_version` field
+default
+: The value configured in the global `ignore_missing_version` field
 
-    type
-    : boolean
+type
+: boolean
+
+///
 
 If `True`, don't fail if the version string to be replaced is not found in the file.
 
-## ignore_missing_file
+### ignore_missing_file
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : The value configured in the global `ignore_missing_file` field
+default
+: The value configured in the global `ignore_missing_file` field
 
-    type
-    : boolean
+type
+: boolean
+
+///
 
 if `True`, don't fail if the configured file is missing.
 
-## include_bumps
+### include_bumps
 
-::: field-list
+/// html | div.field-list
 
-    required
-    : No
+required
+: No
 
-    default
-    : all version components
+default
+: all version components
 
-    type
-    : list of strings
+type
+: list of strings
+
+///
 
 The `include_bumps` file configuration allows you to control when bump-my-version includes this file for changes. Its alternative is the `exclude_bumps` configuration. When a `bump <version component>` command is issued, this file is changed only if the version component is in this list and not in [`exclude_bumps`](#exclude_bumps). The [parse](#parse) configuration defines version components.
 
 The default value, or an empty list, includes all version components.
 
-## exclude_bumps
+### exclude_bumps
 
-::: field-list
+/// html | div.field-list
 
-     required
-     : No
+ required
+ : No
 
-     default
-     : `[]`
+ default
+ : `[]`
 
-     type
-     : list of strings
+ type
+ : list of strings
+
+///
 
 The `exclude_bumps` file configuration allows you to control when bump-my-version excludes this file for changes. Its alternative is the `include_bumps` configuration. When a `bump <version component>` command is issued, this file is only changed if the version component is _not in this list._ The [parse](#parse) configuration defines version components.
 
 The default value does not exclude anything.
 
-## Examples
+### Examples
 
 === "TOML"
 

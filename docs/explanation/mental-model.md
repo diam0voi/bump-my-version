@@ -75,45 +75,52 @@ The `serialize` method of the _version spec_ returns either the optimal serializ
 
 ### Version serialization examples
 
-::: grid wide-gap
+/// grid wide-gap
 
-    ::: card-container depth-0
-        ::: card-media
+    /// card-container depth-0
+        /// card-media
             [![How a version is serialized with values major=1, minor=2, and patch=3](../assets/serializing-a-version-1-2-3.svg)](../assets/serializing-a-version-1-2-3.svg)
-
-        ::: card-content
+        ///
+        /// card-content
             No optional values
             {.card-content-title}
 
             In this example, the `major` component is `1`,  the `minor` component is `2`, and `patch` component is `3`. Since none of the values are optional (`0`), only one serialization format is valid. This one valid format is the optimal format.
+        ///
+    ///
 
-    ::: card-container depth-0
-        ::: card-media
+    /// card-container depth-0
+        /// card-media
             [![How a version is serialized with values major=1, minor=2, and patch=0](../assets/serializing-a-version-1-2-0.svg)](../assets/serializing-a-version-1-2-0.svg)
-
-        ::: card-content
+        ///
+        /// card-content
 
             One optional value
             {.card-content-title}
 
             A version with values major=1, minor=2, and patch=0 has two valid serializations. The optimal serialization is the one that uses the fewest components. `1.2` in this example.
-
-    ::: card-container depth-0
-        ::: card-media
+        ///
+    ///
+    /// card-container depth-0
+        /// card-media
             [![How a version is serialized with values major=1, minor=0, and patch=0](../assets/serializing-a-version-1-0-0.svg)](../assets/serializing-a-version-1-0-0.svg)
-
-        ::: card-content
+        ///
+        /// card-content
             Two optional values
             {.card-content-title}
 
             A version with values major=1, minor=0, and patch=0 has three valid serializations. The optimal serialization is the one that uses the fewest components. `1` in this example.
-
-    ::: card-container depth-0
-        ::: card-media
+        ///
+    ///
+    /// card-container depth-0
+        /// card-media
             [![How a version is serialized with invalid serialization formats](../assets/serializing-a-version-1.svg)](../assets/serializing-a-version-1.svg)
-
-        ::: card-content
+        ///
+        /// card-content
             No valid serialization options
             {.card-content-title}
 
             A version with values major=1, minor=2, and patch=3 has no valid serializations in this example. The `serialize` method returns the first invalid serialization.
+        ///
+    ///
+///
