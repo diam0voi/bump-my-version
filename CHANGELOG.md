@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.1 (2026-06-18)
+
+[Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.4.0...1.4.1)
+
+### Fixes
+
+- Fix colorization of CLI in docs, upgrade to latest `click-extra`. [ee11fb2](https://github.com/callowayproject/bump-my-version/commit/ee11fb2ef891a236997790bf8432f9735998f6bf)
+
+  Refs https://github.com/callowayproject/bump-my-version/issues/406#issuecomment-4731773072
+
 ## 1.4.0 (2026-06-17)
 
 [Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.3.0...1.4.0)
