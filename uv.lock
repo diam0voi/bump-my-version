@@ -118,24 +118,8 @@ wheels = [
 
 [[package]]
 name = "boltons"
-version = "24.0.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version > '3.9' and python_full_version < '3.10'",
-    "python_full_version <= '3.9'",
-]
-sdist = { url = "https://files.pythonhosted.org/packages/7a/fb/214de4d813f566849956915ff07ee60f2b86424f294525e60e01c460d4d2/boltons-24.0.0.tar.gz", hash = "sha256:7153feccaea1ff2e1472f68d4b57fadb796a2ee49d29f638f1c9cd8fb5ebd916", size = 239550, upload-time = "2024-03-31T21:24:08.487Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/35/e50d4a115f93e2a3fbf52438435bb2efcf14c11d4fcd6bdcd77a6fc399c9/boltons-24.0.0-py3-none-any.whl", hash = "sha256:9618695a6ec4f50412e7072e5d78910a00b4111d0b9b549e4a3d60bc321e7807", size = 191661, upload-time = "2024-03-31T21:24:05.986Z" },
-]
-
-[[package]]
-name = "boltons"
 version = "25.0.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-]
 sdist = { url = "https://files.pythonhosted.org/packages/63/54/71a94d8e02da9a865587fb3fff100cb0fc7aa9f4d5ed9ed3a591216ddcc7/boltons-25.0.0.tar.gz", hash = "sha256:e110fbdc30b7b9868cb604e3f71d4722dd8f4dcb4a5ddd06028ba8f1ab0b5ace", size = 246294, upload-time = "2025-02-03T05:57:59.129Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/45/7f/0e961cf3908bc4c1c3e027de2794f867c6c89fb4916fc7dba295a0e80a2d/boltons-25.0.0-py3-none-any.whl", hash = "sha256:dc9fb38bf28985715497d1b54d00b62ea866eca3938938ea9043e254a3a6ca62", size = 194210, upload-time = "2025-02-03T05:57:56.705Z" },
@@ -217,8 +201,7 @@ dev = [
     { name = "pre-commit", version = "4.6.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
 docs = [
-    { name = "click-extra", version = "4.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "click-extra", version = "7.19.0", source = { registry = "https://pypi.org/simple" }, extra = ["mkdocs"], marker = "python_full_version >= '3.10'" },
+    { name = "click-extra", extra = ["mkdocs"], marker = "python_full_version >= '3.10'" },
     { name = "mdx-truly-sane-lists" },
     { name = "mkdocs-click" },
     { name = "mkdocs-drawio" },
@@ -272,7 +255,7 @@ dev = [
     { name = "pre-commit" },
 ]
 docs = [
-    { name = "click-extra", extras = ["mkdocs"] },
+    { name = "click-extra", extras = ["mkdocs"], marker = "python_full_version >= '3.10'", specifier = ">=7.20.1" },
     { name = "mdx-truly-sane-lists" },
     { name = "mkdocs-click" },
     { name = "mkdocs-drawio" },
@@ -582,52 +565,22 @@ wheels = [
 
 [[package]]
 name = "click-extra"
-version = "4.10.0"
+version = "7.20.1"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version > '3.9' and python_full_version < '3.10'",
-    "python_full_version <= '3.9'",
-]
 dependencies = [
-    { name = "boltons", version = "24.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "click", version = "8.1.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "cloup", version = "3.0.9", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "commentjson", marker = "python_full_version < '3.10'" },
-    { name = "extra-platforms", version = "1.2.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "mergedeep", marker = "python_full_version < '3.10'" },
-    { name = "pyyaml", marker = "python_full_version < '3.10'" },
-    { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "tabulate", version = "0.9.0", source = { registry = "https://pypi.org/simple" }, extra = ["widechars"], marker = "python_full_version < '3.10'" },
-    { name = "tomli", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "wcmatch", version = "9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "xmltodict", marker = "python_full_version < '3.10'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c0/41/1f7f96e768decf9eb73c0a84740ebb98c46bcb627cae64bafcaa2702b372/click_extra-4.10.0.tar.gz", hash = "sha256:685839ba41d2ed59d24e80794e110e76e0ae86a890c3f647135e9beac523fe30", size = 89740, upload-time = "2024-09-05T09:52:40.287Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/be/afa62a3932f315c5610628e8579ea7f722f1b0d06207f87424826fa1606d/click_extra-4.10.0-py3-none-any.whl", hash = "sha256:bcd191835592c5cc1ae22d9ca8111ead5a865221d14e0630a0034a2cc490bd60", size = 71142, upload-time = "2024-09-05T09:52:39.097Z" },
-]
-
-[[package]]
-name = "click-extra"
-version = "7.19.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-]
-dependencies = [
-    { name = "boltons", version = "25.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "boltons", marker = "python_full_version >= '3.10'" },
     { name = "click", version = "8.4.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "cloup", version = "3.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "cloup", marker = "python_full_version >= '3.10'" },
     { name = "deepmerge", marker = "python_full_version >= '3.10'" },
-    { name = "extra-platforms", version = "13.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "extra-platforms", marker = "python_full_version >= '3.10'" },
     { name = "requests", version = "2.34.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "tabulate", version = "0.10.0", source = { registry = "https://pypi.org/simple" }, extra = ["widechars"], marker = "python_full_version >= '3.10'" },
     { name = "tomli", version = "2.4.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "wcmatch", version = "10.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a6/83/ebc4b72d81720be9fb21c21158d6d9bcfd4927155fd203c9a16bba55ea2b/click_extra-7.19.0.tar.gz", hash = "sha256:886eeb46979749214ef776a52886dbbac8b3fd43d2698709581c4180d5ef2f44", size = 212376, upload-time = "2026-06-12T10:25:25.485Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5d/54/9e41967fbbd5bc333ea37d62b6bfa26175dd8f25f6fbdc3c1881d64ca552/click_extra-7.20.1.tar.gz", hash = "sha256:4f32c16969a8c1f456dfd354a8e6c3c6968bc60bd9917967c488cc9b74cb826d", size = 227567, upload-time = "2026-06-18T12:25:19.516Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8f/2e/7f59b0274af9ce0357cee5c9a50f73cf12e078507f7b24c96573c58277e1/click_extra-7.19.0-py3-none-any.whl", hash = "sha256:2829462a4faf6ffa7122634ae26d5af0fc233b8a5dc47b869b09f8f4dbcda273", size = 232233, upload-time = "2026-06-12T10:25:23.671Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/8b/3e8e47a67cc40229dd885f1388590fbdb35cc4a8ff70a32d76353d844cc9/click_extra-7.20.1-py3-none-any.whl", hash = "sha256:d73d8865af6add91dd4ff272eaf96299940ad7674b9e3d7bc32e36ad27ffb612", size = 246632, upload-time = "2026-06-18T12:25:17.972Z" },
 ]
 
 [package.optional-dependencies]
@@ -639,28 +592,8 @@ mkdocs = [
 
 [[package]]
 name = "cloup"
-version = "3.0.9"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version > '3.9' and python_full_version < '3.10'",
-    "python_full_version <= '3.9'",
-]
-dependencies = [
-    { name = "click", version = "8.1.8", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.10'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f9/64/7f0a66021ff81d51859c66adc13f3c71f0306c2f8dfb9877a0694cbada05/cloup-3.0.9.tar.gz", hash = "sha256:519f524d3c64040e49a0866b5fc0bfd6af3eac0d3d6a4b2b50b33ab0247db2d7", size = 229896, upload-time = "2026-04-04T03:53:54.182Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/15/435bb5a24e3a2dc8c26afedab0c6f0cf4291c66fb99509c168c38eb81135/cloup-3.0.9-py2.py3-none-any.whl", hash = "sha256:c761ef4e975454335d50c0e1eb83595a932735aac06e8955b3ced774bc62ae7b", size = 54724, upload-time = "2026-04-04T03:53:52.909Z" },
-]
-
-[[package]]
-name = "cloup"
 version = "3.1.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-]
 dependencies = [
     { name = "click", version = "8.4.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "typing-extensions", marker = "python_full_version == '3.10.*'" },
@@ -678,15 +611,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
 ]
-
-[[package]]
-name = "commentjson"
-version = "0.9.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "lark-parser", marker = "python_full_version < '3.10'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/c0/76/c4aa9e408dbacee3f4de8e6c5417e5f55de7e62fb5a50300e1233a2c9cb5/commentjson-0.9.0.tar.gz", hash = "sha256:42f9f231d97d93aff3286a4dc0de39bfd91ae823d1d9eba9fa901fe0c7113dd4", size = 8653, upload-time = "2020-10-05T18:49:06.524Z" }
 
 [[package]]
 name = "coverage"
@@ -1072,15 +996,6 @@ wheels = [
 ]
 
 [[package]]
-name = "distro"
-version = "1.9.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed", size = 60722, upload-time = "2023-12-24T09:54:32.31Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2", size = 20277, upload-time = "2023-12-24T09:54:30.421Z" },
-]
-
-[[package]]
 name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1094,28 +1009,8 @@ wheels = [
 
 [[package]]
 name = "extra-platforms"
-version = "1.2.1"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version > '3.9' and python_full_version < '3.10'",
-    "python_full_version <= '3.9'",
-]
-dependencies = [
-    { name = "boltons", version = "24.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "distro", marker = "python_full_version < '3.10'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/b6/2f/90a25f5c03e7ea3e89600714b165662dbc12d94f3afc72b0b3d58f4f2bb4/extra_platforms-1.2.1.tar.gz", hash = "sha256:e09749bac683fb65b0e5acf332ef1c0aedff96ae11480fbb15978b4816dc8f6c", size = 35110, upload-time = "2024-09-04T16:28:32.792Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0d/c8/372dae1083ec8b250bdc675901bcd6e56c36eb35f30f7fdce6049a8aadf1/extra_platforms-1.2.1-py3-none-any.whl", hash = "sha256:1af952d2d699ae3210c8178e63c5a6cfa537356cb2ead29c1c09bf62fca41a93", size = 23678, upload-time = "2024-09-04T16:28:31.344Z" },
-]
-
-[[package]]
-name = "extra-platforms"
 version = "13.0.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.10'",
-]
 sdist = { url = "https://files.pythonhosted.org/packages/58/47/c761c7dcd279738db4c00a0afae6e0883100365e908ff4b79ddecddbaba1/extra_platforms-13.0.0.tar.gz", hash = "sha256:4f6870be428f6ffb38e880bfb9026c4c3f6432b527b374ac178dbabb1500c34a", size = 80874, upload-time = "2026-05-25T23:44:45.501Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f3/f9/545a173986a41bd0b04765b8b4909347d8240ef576688434e67ba2642b7f/extra_platforms-13.0.0-py3-none-any.whl", hash = "sha256:08c28e9a1004960e090ec0ca56378910817b1ed1482013bbc3e91ab879bd431c", size = 84446, upload-time = "2026-05-25T23:44:47.263Z" },
@@ -1434,12 +1329,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c
 wheels = [
     { url = "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl", hash = "sha256:85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67", size = 134899, upload-time = "2025-03-05T20:05:00.369Z" },
 ]
-
-[[package]]
-name = "lark-parser"
-version = "0.7.8"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/34/b8/aa7d6cf2d5efdd2fcd85cf39b33584fe12a0f7086ed451176ceb7fb510eb/lark-parser-0.7.8.tar.gz", hash = "sha256:26215ebb157e6fb2ee74319aa4445b9f3b7e456e26be215ce19fdaaa901c20a4", size = 276204, upload-time = "2019-11-01T12:45:26.558Z" }
 
 [[package]]
 name = "lxml"
@@ -3065,11 +2954,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/40/44/4a5f08c96eb108af5cb50b41f76142f0afa346dfa99d5296fe7202a11854/tabulate-0.9.0-py3-none-any.whl", hash = "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f", size = 35252, upload-time = "2022-10-06T17:21:44.262Z" },
 ]
 
-[package.optional-dependencies]
-widechars = [
-    { name = "wcwidth", marker = "python_full_version < '3.10'" },
-]
-
 [[package]]
 name = "tabulate"
 version = "0.10.0"
@@ -3384,15 +3268,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/39/62/75f18a0f03b4219c456652c7780e4d749b929eb605c098ce3a5b6b6bc081/wheel-0.47.0.tar.gz", hash = "sha256:cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3", size = 63854, upload-time = "2026-04-22T15:51:27.727Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/87/1b/9e33c09813d65e248f7f773119148a612516a4bea93e9c6f545f78455b7c/wheel-0.47.0-py3-none-any.whl", hash = "sha256:212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced", size = 32218, upload-time = "2026-04-22T15:51:26.296Z" },
-]
-
-[[package]]
-name = "xmltodict"
-version = "0.13.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/39/0d/40df5be1e684bbaecdb9d1e0e40d5d482465de6b00cbb92b84ee5d243c7f/xmltodict-0.13.0.tar.gz", hash = "sha256:341595a488e3e01a85a9d8911d8912fd922ede5fecc4dce437eb4b6c8d037e56", size = 33813, upload-time = "2022-05-08T07:00:04.916Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/94/db/fd0326e331726f07ff7f40675cd86aa804bfd2e5016c727fa761c934990e/xmltodict-0.13.0-py2.py3-none-any.whl", hash = "sha256:aa89e8fd76320154a40d19a0df04a4695fb9dc5ba977cbb68ab3e4eb225e7852", size = 9971, upload-time = "2022-05-08T07:00:02.898Z" },
 ]
 
 [[package]]

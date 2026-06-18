@@ -61,7 +61,7 @@ dev = [
     "pre-commit",
 ]
 docs = [
-    "click-extra[mkdocs]",
+    "click-extra[mkdocs]>=7.20.1 ; python_version >= '3.10'",
     "mdx-truly-sane-lists",
     "properdocs",
     "mkdocs-click",
