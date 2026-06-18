@@ -97,60 +97,7 @@ The `--dry-run` option will explain all the steps it performs without permanent 
 
     If you are in a Git or Mercurial repository, you may see additional messages.
 
-```console title="Incrementing the minor segment"
+```ansi-shell-session title="Incrementing the minor segment"
 $ bump-my-version bump minor --dry-run -vv
-Starting BumpVersion 0.25.1
-Reading configuration
-  Reading config file: /users/gettingstarted/.bumpversion.toml
-  Parsing current version '0.1.0'
-    Parsing version '0.1.0' using regexp '(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)'
-      Parsed the following values: major=0, minor=1, patch=0
-  Attempting to increment part 'minor'
-    Values are now: major=0, minor=2, patch=0
-  Serializing version '<bumpversion.Version:major=0, minor=2, patch=0>'
-    Using serialization format '{major}.{minor}.{patch}'
-    Serialized to '0.2.0'
-  New version will be '0.2.0'
-Dry run active, won't touch any files.
-
-File VERSION: replace `{current_version}` with `{new_version}`
-  Serializing the current version
-    Serializing version '<bumpversion.Version:major=0, minor=1, patch=0>'
-      Using serialization format '{major}.{minor}.{patch}'
-      Serialized to '0.1.0'
-  Serializing the new version
-    Serializing version '<bumpversion.Version:major=0, minor=2, patch=0>'
-      Using serialization format '{major}.{minor}.{patch}'
-      Serialized to '0.2.0'
-  Rendering search pattern with context
-    No RegEx flag detected. Searching for the default pattern: '0\.1\.0'
-  Found '0\.1\.0' at line 1: 0.1.0
-  Would change file VERSION:
-    *** before VERSION
-    --- after VERSION
-    ***************
-    *** 1 ****
-    ! 0.1.0
-    --- 1 ----
-    ! 0.2.0
-
-Processing config file: /users/gettingstarted/.bumpversion.toml
-  Serializing version '<bumpversion.Version:major=0, minor=1, patch=0>'
-    Using serialization format '{major}.{minor}.{patch}'
-    Serialized to '0.1.0'
-  Serializing version '<bumpversion.Version:major=0, minor=2, patch=0>'
-    Using serialization format '{major}.{minor}.{patch}'
-    Serialized to '0.2.0'
-  Rendering search pattern with context
-    No RegEx flag detected. Searching for the default pattern: '0\.1\.0'
-  Found '0\.1\.0' at line 1: 0.1.0
-  Would change file /users/gettingstarted/.bumpversion.toml:tool.bumpversion.current_version:
-    *** before /users/gettingstarted/.bumpversion.toml:tool.bumpversion.current_version
-    --- after /users/gettingstarted/.bumpversion.toml:tool.bumpversion.current_version
-    ***************
-    *** 1 ****
-    ! 0.1.0
-    --- 1 ----
-    ! 0.2.0
-Done.
+{% include-markdown "../assets/getting-started-dry-run.ansi" comments=false %}
 ```
