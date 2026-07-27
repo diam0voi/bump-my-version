@@ -1,5 +1,48 @@
 # Changelog
 
+## 1.5.0 (2026-07-27)
+
+[Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.4.1...1.5.0)
+
+### Other
+
+- Adjust logging levels and add warning for missing configuration files in tests. [4420d9e](https://github.com/callowayproject/bump-my-version/commit/4420d9e760e2019334717c78adb5009e0ff01c51)
+
+  Fixes #421
+
+- Bump the github-actions group across 1 directory with 2 updates. [0944890](https://github.com/callowayproject/bump-my-version/commit/0944890f919e405baea5cec96352877a94959d34)
+
+  Bumps the github-actions group with 2 updates in the / directory: [actions/checkout](https://github.com/actions/checkout) and [actions/setup-python](https://github.com/actions/setup-python).
+
+  Updates `actions/checkout` from 6 to 7
+
+  - [Release notes](https://github.com/actions/checkout/releases)
+  - [Changelog](https://github.com/actions/checkout/blob/main/CHANGELOG.md)
+  - [Commits](https://github.com/actions/checkout/compare/v6...v7)
+
+  Updates `actions/setup-python` from 6 to 7
+
+  - [Release notes](https://github.com/actions/setup-python/releases)
+  - [Commits](https://github.com/actions/setup-python/compare/v6...v7)
+
+  ______________________________________________________________________
+
+  **updated-dependencies:** - dependency-name: actions/checkout
+  dependency-version: '7'
+  dependency-type: direct:production
+  update-type: version-update:semver-major
+  dependency-group: github-actions
+
+  **signed-off-by:** dependabot[bot] <support@github.com>
+
+- [pre-commit.ci] pre-commit autoupdate. [39a2478](https://github.com/callowayproject/bump-my-version/commit/39a2478832714e4dd65a53ba7c85721da3c8d033)
+
+  **updates:** - [github.com/astral-sh/ruff-pre-commit: v0.15.17 → v0.15.22](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.17...v0.15.22)
+
+### Updates
+
+- Update ruff directives and pre-commit hooks to latest versions. [97f5f3c](https://github.com/callowayproject/bump-my-version/commit/97f5f3c66f33451172e776757b725594482cedcd)
+
 ## 1.4.1 (2026-06-18)
 
 [Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.4.0...1.4.1)
