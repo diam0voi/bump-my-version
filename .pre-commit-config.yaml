@@ -1,7 +1,7 @@
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.15.22
+    rev: v0.16.0
     hooks:
       - id: ruff-format
         exclude: test.*
@@ -72,10 +72,12 @@ repos:
         exclude: test.*
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.2.37  # Use latest version
+    rev: v0.2.43  # Use latest version
     hooks:
       - id: rumdl      # Lint only
+        exclude: CHANGELOG.md
       - id: rumdl-fmt  # Auto-format
+        exclude: CHANGELOG.md
 
 ci:
   autofix_prs: false
