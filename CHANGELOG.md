@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.1 (2026-08-06)
+
+[Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.5.0...1.5.1)
+
+### New
+
+- Add tests to cover new push on tag. [d73288a](https://github.com/callowayproject/bump-my-version/commit/d73288a8cae05be099b7bb3b484aeb9751c92fe9)
+
+### Other
+
+- Document `push_tag` configuration and usage in global settings. [e832c97](https://github.com/callowayproject/bump-my-version/commit/e832c97e78075e842b5cbf7bff15f227c1bc3230)
+
+- Support pushing tag-only releases in one go. [ec14558](https://github.com/callowayproject/bump-my-version/commit/ec14558e5fe66b0fb46732324e2c79e8a92a06bb)
+
 ## 1.5.0 (2026-07-27)
 
 [Compare the full difference.](https://github.com/callowayproject/bump-my-version/compare/1.4.1...1.5.0)
