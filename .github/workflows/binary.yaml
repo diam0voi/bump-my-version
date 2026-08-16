@@ -1,0 +1,57 @@
+name: Build Windows single-file exe
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            C:\Users\runneradmin\AppData\Local\pip\Cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/pyproject.toml') }}
+
+      - name: Install build tools & package
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install pyinstaller
+          # Install your package into the runner environment so imports resolve
+          pip install .
+
+      - name: Create PyInstaller entry script
+        run: |
+          echo "from bumpversion.cli import cli" > cli_entry.py
+          echo "" >> cli_entry.py
+          echo "if __name__ == '__main__':" >> cli_entry.py
+          echo "    cli()" >> cli_entry.py
+
+      - name: Build single-file executable with PyInstaller
+        run: |
+          # --onefile produces a single .exe; --console keeps it a console app.
+          pyinstaller --noconfirm --clean --onefile --name bump-my-version cli_entry.py
+
+      - name: Show build outputs
+        run: |
+          dir dist
+          dir build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bump-my-version-windows-x64
+          path: dist/bump-my-version.exe
